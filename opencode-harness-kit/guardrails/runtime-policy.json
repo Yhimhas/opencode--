@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "maxTaskDurationMinutes": 120,
+  "maxSteps": 200,
+  "maxConsecutiveToolFailures": 5,
+  "tokenBudgetSoftLimit": 800000,
+  "loopDetectionSimilarityThreshold": 0.92,
+  "sensitiveActionsRequireConfirm": true
+}

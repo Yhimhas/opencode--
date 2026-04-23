@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "code-review",
+      "path": "skills/packs/code-review.md",
+      "trigger": ["review", "code review"],
+      "riskLevel": "low"
+    },
+    {
+      "id": "test-generation",
+      "path": "skills/packs/test-generation.md",
+      "trigger": ["test", "单元测试"],
+      "riskLevel": "medium"
+    },
+    {
+      "id": "safe-refactor",
+      "path": "skills/packs/safe-refactor.md",
+      "trigger": ["refactor", "重构"],
+      "riskLevel": "medium"
+    },
+    {
+      "id": "debug-triage",
+      "path": "skills/packs/debug-triage.md",
+      "trigger": ["debug", "排查"],
+      "riskLevel": "low"
+    },
+    {
+      "id": "docs-maintenance",
+      "path": "skills/packs/docs-maintenance.md",
+      "trigger": ["docs", "文档"],
+      "riskLevel": "low"
+    },
+    {
+      "id": "security-review",
+      "path": "skills/packs/security-review.md",
+      "trigger": ["security", "安全审计"],
+      "riskLevel": "low"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+node_modules/
+opencode-src/
+opencode-src-fresh/
+opencode-src-damaged-*/
+opencode-src-restored/

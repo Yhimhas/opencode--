@@ -1,0 +1,9 @@
+{
+  "name": "opencode-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "harness:validate": "node opencode-harness-kit/scripts/validate-all.mjs",
+    "harness:integrate": "node scripts/integrate-into-opencode.mjs"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "defaultMode": "deny",
+  "servers": {
+    "docs-fetch": {
+      "enabled": false,
+      "toolsAllow": ["fetch_url", "read_documentation"],
+      "timeoutMs": 15000
+    },
+    "repo-ops": {
+      "enabled": false,
+      "toolsAllow": ["list_dir", "read_file"],
+      "timeoutMs": 12000
+    }
+  }
+}
