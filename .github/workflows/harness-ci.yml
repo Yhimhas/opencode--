@@ -18,6 +18,8 @@ on:
 jobs:
   harness-check:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,10 +27,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --include=dev
 
-      - name: Run harness CI checks
-        run: npm run harness:ci
+      - name: Run harness lint
+        run: npm run harness:lint
+
+      - name: Run harness format check
+        run: npm run harness:format:check
+
+      - name: Run harness tests
+        run: npm run harness:test
+
+      - name: Run harness validate
+        run: npm run harness:validate
