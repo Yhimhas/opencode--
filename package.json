@@ -4,6 +4,15 @@
   "type": "module",
   "scripts": {
     "harness:validate": "node opencode-harness-kit/scripts/validate-all.mjs",
-    "harness:integrate": "node scripts/integrate-into-opencode.mjs"
+    "harness:integrate": "node scripts/integrate-into-opencode.mjs",
+    "harness:test": "node --test \"opencode-harness-kit/test/**/*.test.mjs\"",
+    "harness:lint": "eslint \"opencode-harness-kit/scripts/**/*.mjs\" \"opencode-harness-kit/test/**/*.mjs\" \"scripts/**/*.mjs\"",
+    "harness:format:check": "prettier --check \"opencode-harness-kit/**/*.mjs\" \"scripts/**/*.mjs\" \"*.md\" \".github/workflows/*.yml\"",
+    "harness:format:write": "prettier --write \"opencode-harness-kit/**/*.mjs\" \"scripts/**/*.mjs\" \"*.md\" \".github/workflows/*.yml\"",
+    "harness:ci": "npm run harness:lint && npm run harness:format:check && npm run harness:test && npm run harness:validate"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.3"
   }
 }
